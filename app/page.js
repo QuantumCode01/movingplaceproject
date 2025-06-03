@@ -11,6 +11,7 @@ import Licensed from "@/components/Licensed";
 import Faqsection from "@/components/Faqsection";
 import Form from "@/components/Form";
 import Image from "next/image";
+import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <main>
@@ -135,6 +136,7 @@ export default function Home() {
             </div>
        
        <Form/>
+      <Footer/>
     </main>
   );
 }
