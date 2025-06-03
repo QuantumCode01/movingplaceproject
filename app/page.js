@@ -1,103 +1,140 @@
+import Hero from "@/components/Hero";
+import Navbar from "@/components/Navbar";
+import Advantage from "@/components/Advantage";
+import Card from "@/components/Card";
+import cardData from "@/data/carddata";
+import smallcarddata from "@/data/smallcarddata";
+import Smallcard from "@/components/Smallcard";
+import servicescardData from "@/data/servicescarddata";
+import facilitiesdata from "@/data/facilitiesdata";
+import Licensed from "@/components/Licensed";
+import Faqsection from "@/components/Faqsection";
+import Form from "@/components/Form";
 import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main>
+        <Navbar/>
+        <Hero/>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <div className="flex flex-col justify-center py-[64px]">
+            <h2 className="text-[30px] leading-[38px] font-bold font-mulish text-center w-[361px] sm:text-[36px] sm:leading-[100%]  sm:w-auto sm:max-w-[1072px] mx-auto ">
+              Personalized Moving, Made Simple
+            </h2>
+            <p className="font-mulish font-normal text-[16px] leading-[150%] tracking-[0] text-center   max-w-[930px] mx-auto my-[24px]">Skip the hassle of phone calls—our Smart Match Technology instantly connects you with the right movers for your needs. Whether you’re moving locally or long distance, MovingPlace offers a range of services to fit your unique move.</p>
+
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div className="flex flex-col md:flex-row gap-6 justify-center items-center  pb-[64px]">
+              {cardData.map((card, index) => (
+                <Card
+                key={index}
+                title={card.title}
+                subtitle={card.subtitle}
+                description={card.description}
+                image={card.image}
+                buttonText={card.buttonText}
+                bgColor={card.bgColor}
+                titleColor={card.titleColor}
+                subtitleColor={card.subtitleColor}
+                descriptionColor={card.descriptionColor}
+                iconImage={card.iconImage}
+                />
+                
+              ))}
+        </div>
+        <Advantage/>
+      
+        <div className="shadow-[0px_10px_18px_0px_rgba(18,18,23,0.10)] bg-white rounded-[24px] py-[24px] px-[64px] max-w-[1400px] mx-auto my-[64px]">
+           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 justify-center items-center ">
+              {smallcarddata.map((card, index) => (
+                <Smallcard
+                key={index}
+                title={card.title}
+                description={card.description}
+                image={card.image}
+                />  
+              ))}
+            </div>
+        </div>
+
+
+         <div className="flex flex-col justify-center py-[64px]">
+            <h2 class="text-[24px] leading-[32px] font-bold font-mulish text-center w-[90%] max-w-[361px] sm:text-[30px] sm:leading-[38px] md:text-[36px] md:leading-[100%] md:max-w-[1072px] mx-auto">
+  Move Confidently with All-Inclusive Services
+</h2>
+
+            <p className="font-mulish font-normal text-[16px] leading-[150%] tracking-[0] text-center   max-w-[930px] mx-auto my-[24px]">Everything you need for a smooth, stress-free move is included—no hidden fees, no surprises.</p>
+
+        </div>
+        <div className="flex flex-col md:flex-row gap-6 justify-center items-center ">
+              {servicescardData.map((card, index) => (
+                <Card
+                key={index}
+                title={card.title}
+                description={card.description}
+                image={card.image}
+                buttonText={card.buttonText}
+                bgColor={card.bgColor}
+                titleColor={card.titleColor}
+                descriptionColor={card.descriptionColor}
+               
+                />
+                
+              ))}
+        </div>
+
+
+
+         <div className="shadow-[0px_10px_18px_0px_rgba(18,18,23,0.10)] bg-white rounded-[24px] p-[24px] mx-auto max-w-[1272px] my-[64px]  ">
+           <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 justify-center items-center ">
+              {facilitiesdata.map((card, index) => (
+                <Smallcard
+                key={index}
+                title={card.title}
+                // description={card.description}
+                image={card.image}
+                />  
+              ))}
+            </div>
+        </div>
+        
+
+        <Licensed/>
+
+   <div className="hero  min-h-screen">
+      <div className="hero-content flex-col lg:flex-row lg:items-center w-full max-w-[1400px] mx-auto px-4 gap-8">
+        
+       
+        <div className="relative w-full lg:w-1/2 h-[300px] lg:h-[500px]">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/assets/Frame1.png" 
+            alt="Left Image"
+            fill
+            className="rounded-lg  object-cover"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        </div>
+
+        
+        <div className="relative w-full lg:w-1/2 h-[300px] lg:h-[500px]">
           <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+            src="/assets/Frame2.png" 
+            alt="Right Image"
+            fill
+            className="rounded-lg object-cover"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        </div>
+      </div>
     </div>
+
+            <div className="flex flex-col justify-center py-[64px]">
+               <h2 className="font-mulish font-bold text-center mx-auto w-[90%] max-w-[361px] text-[30px] leading-[38px] sm:text-[36px] sm:leading-[100%] sm:max-w-[1072px] sm:align-bottom">
+  Frequently Asked Questions
+</h2>
+
+                      <Faqsection/>
+            </div>
+       
+       <Form/>
+    </main>
   );
 }
