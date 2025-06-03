@@ -33,15 +33,13 @@ export default function Navbar() {
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow right-0">
-        <li><a>Item 1</a></li>
+        <li><a>Services</a></li>
         <li>
-          <a>Parent</a>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
+          <a>Location</a>
+         
         </li>
-        <li><a>Item 3</a></li>
+        <li><a>Moving Tips</a></li>
+        <li><a>FAQS</a></li>
       </ul>
     </div>
 </div>
