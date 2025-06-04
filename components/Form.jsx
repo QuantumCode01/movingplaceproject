@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Form() {
   return (
-    <div class="max-w-[864px] mx-auto bg-white rounded-2xl shadow-lg p-6 space-y-4">
-  <h2 class="text-[30px] leading-[38px] font-bold text-center text-gray-800 font-[Mulish] align-middle">
+    <div class="max-w-[864px] mx-auto bg-white rounded-2xl sm:shadow-lg p-6 space-y-4">
+  <h2 class="text-[30px] leading-[38px] font-bold text-center text-[#2E343E] font-[Mulish] align-middle">
   Enter your location(s)
 </h2>
 
@@ -69,18 +69,19 @@ export default function Form() {
   </select>
 
  
-  <div class="flex justify-between items-center text-sm text-gray-500">
+  <div class="flex justify-between items-center text-sm text-[#8696AA]">
     <button class="flex items-center space-x-1 hover:underline">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
         stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
           d="M15.232 5.232l3.536 3.536M9 13h3l9-9a2.121 2.121 0 10-3-3l-9 9v3z" />
       </svg>
-      <span>Enter Addresses Manually</span>
+      <span className='sm:block hidden'>Enter Addresses Manually</span>
+      <span className='sm:hidden block'>Enter Manually</span>
     </button>
 
 <button
-  class="border border-gray-300 px-[5px] py-[6px] rounded-full text-gray-700 hover:bg-gray-100 transition text-sm flex items-center space-x-1">
+  class="border border-gray-300 px-[4px] py-[4px] rounded-full text-[#526077] hover:bg-gray-100 transition text-[13px] flex items-center space-x-1">
   <span>+ Add Location</span>
 </button>
 
