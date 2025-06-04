@@ -14,12 +14,12 @@ export default function Faqsection() {
             className="collapse collapse-arrow join-item border-b border-gray-300 py-[40px]"
           >
             <input type="radio" name="faq-accordion" defaultChecked={index === 0}  />
-            <div className="collapse-title font-semibold text-lg p-0 ">
+            <div className="collapse-title  text-[24px] p-0 font-mulish font-normal pr-[8%]">
               {faq.question}
             </div>
-            <div className="collapse-content text-sm text-gray-600 p-0 pb-0 ">
+            <div className="collapse-content text-sm text-[#2E343E] pt-[16px] px-0 pb-[0px] text-[16px]">
               {faq.answer || (
-                <span className="italic text-gray-400">Answer coming soon...</span>
+                <span className="italic text-[#2E343E]">Answer coming soon...</span>
               )}
             </div>
           </div>
