@@ -3,8 +3,8 @@ import Image from "next/image";
 export default function Licensed() {
   return (
     <div>
-           <div className="hero  min-h-screen">
-                <div className="hero-content flex-col lg:flex-row gap-16">
+           <div className="hero ">
+                <div className="hero-content flex-col lg:flex-row gap-16 px-[16px] lg:px-[0px] md:px-[32px] pb-[64px]">
                     <div className=" w-full lg:w-[55%] max-w-3xl mx-auto order-2 lg:order-1">
 
                         <h2 className="text-[#2E343E] text-[36px] sm:text-[48px] font-extrabold  mb-[40px] leading-tight">
