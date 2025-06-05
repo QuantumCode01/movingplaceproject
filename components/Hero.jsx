@@ -2,8 +2,8 @@ import React from 'react'
 import Image from "next/image";
 export default function Hero() {
   return (
-    <div className='sm:py-[64px] py-[32px] relative'>
-           <div className="hero  min-h-screen max-w-[1400px] mx-auto lg:px-[64px] px-[16px] md:px-[32px]">
+    <div className='sm:pb-[64px] sm:pt-[100px] py-[32px] relative'>
+           <div className="hero  max-w-[1400px] mx-auto lg:px-[64px] px-[16px] md:px-[32px]">
                 <div className="hero-content flex-col lg:flex-row w-full px-0 py-0 items-start ">
                   <div className='w-[103%] lg:w-[57%] order-2 sm:order-1   py-6 lg:py-[0px]'>
                    <img
