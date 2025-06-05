@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Card({  image="", title="", subtitle="", description="", buttonText="", bgColor="", titleColor="",subtitleColor="",descriptionColor="" ,iconImage=""}) {
   return (
 
-    <div className=" rounded-[24px]  shadow-md p-[32px] w-full max-w-md "  style={{ backgroundColor: bgColor }}>
+    <div className=" rounded-[24px]  shadow-md p-[32px] w-full  "  style={{ backgroundColor: bgColor }}>
       <img src={image} alt={title} className="rounded-xl mb-4 w-full h-44 object-cover" />
   
       <h3 className="lg:text-[30px] text-[24px] font-semibold mb-1 " style={{ color: titleColor }}>{title}</h3>
