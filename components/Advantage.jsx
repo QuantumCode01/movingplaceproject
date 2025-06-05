@@ -3,8 +3,8 @@ import Image from "next/image";
 export default function Advantage() {
   return (
     <div>
-           <div className="hero  min-h-screen sm:py-[64px] py-[32px] lg:px-[64px] px-[16px] md:px-[32px]">
-                <div className="hero-content flex-col lg:flex-row-reverse gap-[64px] items-start px-0">
+           <div className="hero  sm:py-[64px] py-[32px] lg:px-[64px] px-[16px] md:px-[32px]">
+                <div className="hero-content flex-col lg:flex-row-reverse gap-[64px] items-start px-0 py-0">
                     <div className=" w-full lg:w-[55%]  max-w-3xl mx-auto order-2 lg:order-1 ">
 
                         <h2 className="text-[#2E343E] text-[36px] sm:text-[48px] font-extrabold  mb-[40px] leading-tight ">
