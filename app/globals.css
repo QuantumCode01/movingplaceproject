@@ -36,3 +36,70 @@ h2{
 button {
   @apply px-[20px] py-[12px] rounded-[360px] font-semibold shadow-md;
 }
+.custom-collapse .collapse-content {
+  padding: 0px !important;
+  transition: padding 0.3s ease;
+}
+
+.custom-collapse[open] .collapse-content {
+  padding: 16px 0px 0px 0px !important;
+}
+.slick-list .slick-track{
+  display: flex !important;
+  overflow: hidden;
+}
+.slick-slide{
+  margin:20px 40px 80px;
+  border-radius: 24px;
+  box-shadow: 0px 4px 6px -2px #1212170D;
+
+box-shadow: 0px 10px 15px -3px #12121714;
+opacity: 0.4;
+}
+.slick-dots{
+  display: flex !important;
+  justify-content: center;
+    box-shadow: 0px 4px 6px 0px #12121714;
+    width: fit-content;
+    margin: auto;
+    border-radius: 4px;
+}
+.slick-dots button{
+  border-radius: 0px !important;
+  box-shadow: none;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  height: 56px;
+  width: 59px;
+}
+.slick-dots button[aria-label="Previous"],.slick-dots button[aria-label="Next"]{
+  width:70px;
+  height:56px;
+}
+.slick-dots button[aria-label="Previous"]{
+  border-radius: 4px 0px 0px 4px;
+}
+.slick-dots button[aria-label="Next"]{
+    border-radius: 0px 4px 4px 0px;
+}
+.slick-dots li{
+  margin:0px;
+  background-color: #ffffff;
+}
+li.slick-active{
+  background-color: #FFD451 !important;
+}
+.slick-dots li:not(.slick-active) button:hover{
+  background-color:rgb(248, 247, 247);
+}
+.slick-center{
+  box-shadow: 0px 25px 50px -12px #12121740;
+  opacity: 1;
+}
+@media only screen and (max-width:576px){
+  .slick-slide{
+  margin:20px 14px 80px;
+
+}
+}
