@@ -34,7 +34,10 @@ h2{
  
 }
 button {
-  @apply px-[20px] py-[12px] rounded-[360px] font-semibold shadow-md;
+  @apply px-[20px] py-[12px] rounded-[360px] font-semibold;
+}
+button:hover{
+  cursor:pointer;
 }
 .custom-collapse .collapse-content {
   padding: 0px !important;
