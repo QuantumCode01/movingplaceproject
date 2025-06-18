@@ -11,7 +11,7 @@ export default function Footer() {
           </div>
           <a
             href="#"
-            className="bg-yellow-400 text-[#2E343E] font-semibold px-5 py-2 rounded-full hover:bg-yellow-300 transition w-fit"
+            className="bg-yellow-400 text-[#2E343E] font-semibold px-5 py-2 rounded-full hover:bg-yellow-500 transition w-fit"
           >
             Get a Moving Quote
           </a>
@@ -50,25 +50,25 @@ export default function Footer() {
         </div>
 
      
-        <hr className="border-gray-200 mb-4" />
+        <hr className="border-gray-200 mb-[8px]" />
 
    
-        <div className="flex flex-col lg:flex-row sm:justify-between text-[14px] text-[#84878A] gap-[16px] h-[29px]">
+        <div className="flex flex-col lg:flex-row sm:justify-between text-[14px] text-[#84878A] gap-[16px] h-[40px] items-center">
           <p className='mr-auto'>Copyright 2024 MovingPlace LLC. All Rights Reserved.</p>
           <p>License #MC807665. 2200 1st Ave S, Seattle, WA 98134</p>
-          <div className="flex gap-4 text-blue-600 lg:mt-[0px] mt-[10px]">
-             <span className='text-[#CFD1D2] w-px h-5  inline-block'>|</span>
-            <a href="#" className="hover:underline">
-              Terms
-            </a>
-             <span className='text-[#CFD1D2]'>|</span>
-            <a href="#" className="hover:underline">
-              Privacy
-            </a>
-             <span className='text-[#CFD1D2]'>|</span>
-            <a href="#" className="hover:underline">
-              Sitemap
-            </a>
+          <div className="flex gap-4 text-blue-600 lg:mt-[0px] mt-[10px] h-[32px]">
+             <div className='text-[#CFD1D2]  border border-[#CFD1D2] hidden sm:block'></div>
+              <a href="#" className="hover:underline flex items-center">
+                Terms
+              </a>
+             <div className='text-[#CFD1D2] border border-[#CFD1D2] hidden sm:block'></div>
+              <a href="#" className="hover:underline flex items-center">
+                Privacy
+              </a>
+             <div className='text-[#CFD1D2] border border-[#CFD1D2] hidden sm:block'></div>
+              <a href="#" className="hover: flex items-center">
+                Sitemap
+              </a>
           </div>
         </div>
       </div>
